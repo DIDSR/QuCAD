@@ -1,0 +1,54 @@
+##
+## By Elim Thompson 3/10/2023
+##
+## This is an example data file that can be fed to `run_sim.py` as an alternative
+## to command line arguments. This file can be parsed to `run_sim.py` via
+## `--configFile` flag.
+####################################################################################
+
+################################################
+## Clinical setting
+################################################
+traffic                        0.8 # Hospital busyness:
+                                   # Between 0.0 (very quiet) and 0.95 (very congested)
+fractionED                     0.0 # Fraction of interrupting patients:
+                                   # Between 0.0 (no interrupting images) and 1.0 (all images are interrupting)
+nRadiologists                  1   # Number of radiologists reading during the time window:
+                                   # At least 1
+meanServiceTimeDiseasedMin     10  # Average radiologist's service time [in minutes] for cases s/he claims
+                                   # diseased (based on diagnosis not truth)
+meanServiceTimeNonDiseasedMin  10  # Average radiologist's service time [in minutes] for cases s/he claims
+                                   # non-diseased (based on diagnosis not truth)
+meanServiceTimeInterruptingMin 5   # Average radiologist's service time [in minutes] for interrupting cases
+
+################################################
+## Disease condition specific parameters
+################################################
+prevalence 0.1 # Disease prevalence among cases in the radiologist reading list
+               # Between 0.0 (radiologist calls all cases non-diseased) and 1.0 
+
+################################################
+## CADt AI diagnostic performance
+################################################
+TPFThresh 0.9                       # CADt AI sensitivity
+FPFThresh None                      # CADt AI (1-specificity)
+                                    # If using an `rocFile`, set this to "None"
+rocFile   ../inputs/exampleROC.dat  # CADt ROC curve:
+                                    #  First column = False-positive fraction
+                                    #  Second column = True-positive fraction
+                                    # Note: a Bi-normal distribution is assumed for parameterization
+
+################################################
+## Simulation setting
+################################################
+nTrials         10                           # Number of trials to perform
+nPatientsTarget 1000                         # Number of targeted patient images
+verbose         True                         # False to turn off all printouts
+doTrialOnly     False                        # If False, also run 1 simulation run for debugging 
+                                             # Otherwise (esp for job submission), put it to False
+statsFile       ../outputs/stats/stats.p     # Pickled file with the parameters and simulation results
+runTimeFile     ../outputs/stats/runTime.txt # Text file showing runtime performance
+                                             # If None, do not output the runtime performance
+plotPath        ../outputs/plots/            # Folder where all output plots are stored
+                                             # If None, no plots are generated
+
