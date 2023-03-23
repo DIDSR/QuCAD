@@ -19,7 +19,7 @@ This software package was developed using Python 3.9.4 with the following extra 
 `scripts/run_sim.py` is the main script to run this software. There are two ways to accept user input values that specify clinical settings, CADt AI diagnostic performance, and software preferences. By default, outputs will be dumped in outputs/ automatically including plots and a pickled python dictionary that contains all simulation information. Please refer to  the `UserManual.pdf` and `scripts/README.md` for more information
 
 # Relevant Publications
-* [arXiv pre-print (2023) - To Be Published]()
+* [arXiv pre-print (2023)](https://arxiv.org/abs/2303.07050)
 * [SPIE Medical Imaging (2022)](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12035/0000/Wait-time-saving-analysis-and-clinical-effectiveness-of-Computer-Aided/10.1117/12.2603184.full?SSO=1)
 * [FDA Science Forum (2021)](https://www.fda.gov/media/148986/download)
 
