@@ -19,9 +19,12 @@ This software package was developed using Python 3.9.4 with the following extra 
 `scripts/run_sim.py` is the main script to run this software. There are two ways to accept user input values that specify clinical settings, CADt AI diagnostic performance, and software preferences. By default, outputs will be dumped in outputs/ automatically including plots and a pickled python dictionary that contains all simulation information. Please refer to  the `UserManual.pdf` and `scripts/README.md` for more information
 
 # Relevant Publications
-* [arXiv pre-print (2023)](https://arxiv.org/abs/2303.07050)
-* [SPIE Medical Imaging (2022)](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12035/0000/Wait-time-saving-analysis-and-clinical-effectiveness-of-Computer-Aided/10.1117/12.2603184.full?SSO=1)
+* [Yee Lam Elim Thompson, Gary M. Levine, Weijie Chen, Berkman Sahiner, Qin Li, Nicholas Petrick, Jana G. Delfino, Miguel A. Lago, Qian Cao, and Frank W. Samuelson. "Evaluation of wait time saving effectiveness of triage algorithms." arXiv preprint arXiv:2303.07050 (2023).](https://arxiv.org/abs/2303.07050)
+* [Yee Lam Elim Thompson, Gary Levine, Weijie Chen, Berkman Sahiner, Qin Li, Nicholas Petrick, Frank Samuelson, "Wait-time-saving analysis and clinical effectiveness of computer-aided triage and notification (CADt) devices based on queueing theory," Proc. SPIE 12035, Medical Imaging 2022: Image Perception, Observer Performance, and Technology Assessment, 120350Q (4 April 2022); https://doi.org/10.1117/12.2603184](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12035/0000/Wait-time-saving-analysis-and-clinical-effectiveness-of-Computer-Aided/10.1117/12.2603184.full?SSO=1)
 * [FDA Science Forum (2021)](https://www.fda.gov/media/148986/download)
+
+# Citation for this tool
+Yee Lam Elim Thompson, Jixin Audrey Zheng, Frank W. Samuelson. (2023) QuCAD [Source Code] https://github.com/DIDSR/QuCAD/.
 
 # Contact
 For any questions/suggestions/collaborations, please contact Elim Thompson either via this GitHub repo or via email (yeelamelim.thompson@fda.hhs.gov).
