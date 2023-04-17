@@ -134,14 +134,14 @@ def get_state_pdf_MMn (ns, s, aLambda, aMu):
 
     rho = aLambda / s / aMu
     
-    p0_first = numpy.sum ([(s*rho)**(i)/math.factorial(i) for i in numpy.linspace (0, s-1, s)])
-    p0_second = (s*rho)**s / math.factorial (s) / (1-rho)
+    p0_first = numpy.sum ([(s*rho)**(i)/numpy.math.factorial (i) for i in numpy.linspace (0, s-1, s)])
+    p0_second = (s*rho)**s / numpy.math.factorial  (s) / (1-rho)
     p0 = 1/(p0_first + p0_second)
     
     pred = []
     for n in ns:
-        p = (s*rho)**n * p0 / math.factorial (n) if n <= s else \
-            s**s*rho**n * p0 / math.factorial (s)
+        p = (s*rho)**n * p0 / numpy.math.factorial  (n) if n <= s else \
+            s**s*rho**n * p0 / numpy.math.factorial  (s)
         pred.append (p)
     
     return numpy.array (pred)
@@ -973,7 +973,7 @@ class traditional_calculator (stateProb_calculator):
             nstats = self._nRad
             for i in range (nstats):
                 nCustomer = i
-                nsubstats = math.factorial (4+nCustomer-1) / (math.factorial (nCustomer)*math.factorial (4-1))
+                nsubstats = numpy.math.factorial  (4+nCustomer-1) / (numpy.math.factorial  (nCustomer)*numpy.math.factorial  (4-1))
                 index = int (nsubstats)
                 if i > 0: index += 1
                 indices.append (index)
@@ -985,7 +985,7 @@ class traditional_calculator (stateProb_calculator):
             nstats = self._nRad
             for i in range (nstats):
                 nCustomer = i
-                nsubstats = math.factorial (2+nCustomer-1) / (math.factorial (nCustomer)*math.factorial (2-1))
+                nsubstats = numpy.math.factorial  (2+nCustomer-1) / (numpy.math.factorial  (nCustomer)*numpy.math.factorial  (2-1))
                 index = int (nsubstats)
                 if i > 0: index += 1
                 indices.append (index)
@@ -1197,7 +1197,7 @@ class MG1_calculator (stateProb_calculator):
         
         P = numpy.identity (self._A0.shape[0])
         for nrow in range (self._A0.shape[0]):
-            P[nrow][nrow] = math.factorial(r)/numpy.power (self._gamma[nrow][0], r)
+            P[nrow][nrow] = numpy.math.factorial (r)/numpy.power (self._gamma[nrow][0], r)
         A0 = numpy.dot (P, self._A0)
         A1 = numpy.dot (P, self._A1)
         A2 = numpy.dot (P, self._A2)
@@ -1285,14 +1285,14 @@ class MG1_calculator (stateProb_calculator):
 
         P = numpy.identity (A1.shape[0])
         for nrow in range (A1.shape[0]):
-            P[nrow][nrow] = math.factorial(r)/numpy.power (gamma[nrow][0], r)
+            P[nrow][nrow] = numpy.math.factorial (r)/numpy.power (gamma[nrow][0], r)
         A0 = numpy.dot (P, B0)
         A1 = numpy.dot (P, A1)
         A2 = numpy.dot (P, A2)
         
         #P = numpy.identity (self._A1.shape[0])
         #for nrow in range (self._A1.shape[0]):
-        #    P[nrow][nrow] = math.factorial(r)/numpy.power (self._gamma[nrow][0], r)
+        #    P[nrow][nrow] = numpy.math.factorial (r)/numpy.power (self._gamma[nrow][0], r)
         #A0 = numpy.dot (P, B0)
         #A1 = numpy.dot (P, self._A1)
         #A2 = numpy.dot (P, self._A2)
