@@ -5,6 +5,16 @@ In the past decade, Artificial Intelligence (AI) algorithms have made promising 
 
 This software tool is developed to simulate clinical workflow of image review/interpretation. Included in this tool, we also provide a mathematical framework based on queueing theory to calculate the average waiting time per patient image before and after a CADt device is used. For more complex workflow model with multiple priority classes and radiologists, an approximation method known as the Recursive Dimensionality Reduction technique proposed by [Harchol-Balter et al (2005)](https://www.cs.cmu.edu/~harchol/Papers/questa.pdf) is applied. We define a performance metric to measure the device’s time-saving effectiveness. Simulated and theoretical average time-saving is comparable, and the simulation is used to provide confidence intervals of the performance metric we defined.
 
+# Tool Reference
+* RST Reference Number: RST24AI01.01
+* Date of Publication: 09/24/2023
+* Recommended Citation: U.S. Food and Drug Administration. (2023). QuCAD: Software to Evaluate Wait-Time-Saving Benefits of CADt Devices (RST24AI01.01). https://cdrh-rst.fda.gov/qucad-software-evaluate-wait-time-saving-benefits-cadt-devices
+
+# Disclaimer
+## About the Catalog of Regulatory Science Tools
+The enclosed tool is part of the Catalog of Regulatory Science Tools, which provides a peer- reviewed resource for stakeholders to use where standards and qualified Medical Device Development Tools (MDDTs) do not yet exist. These tools do not replace FDA-recognized standards or MDDTs. This catalog collates a variety of regulatory science tools that the FDA's Center for Devices and Radiological Health's (CDRH) Office of Science and Engineering Labs (OSEL) developed. These tools use the most innovative science to support medical device development and patient access to safe and effective medical devices. If you are considering using a tool from this catalog in your marketing submissions, note that these tools have not been qualified as [Medical Device Development Tools](https://www.fda.gov/medical-devices/medical-device-development-tools-mddt) and the FDA has not evaluated the suitability of these tools within any specific context of use. You may [request feedback or meetings for medical device submissions](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/requests-feedback-and-meetings-medical-device-submissions-q-submission-program) as part of the Q-Submission Program.
+For more information about the Catalog of Regulatory Science Tools, email OSEL_CDRH@fda.hhs.gov.
+
 # Software Requirements
 This software package was developed using Python 3.9.4 with the following extra packages.
 * numpy
